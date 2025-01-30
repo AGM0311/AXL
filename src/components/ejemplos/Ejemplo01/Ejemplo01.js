@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
 import "./Ejemplo01.scss";
+import { Ejemplo02 } from '../Ejemplo02';
+
+
 export function Ejemplo01() {
   const [contador, setContador] = useState(0);
 
@@ -11,16 +13,20 @@ export function Ejemplo01() {
   const decrementarValor = () => {
     setContador(contador -1);
   };
+  const fondo={
+    tema:{
+      backgroundColor:'black',
+      color:'white',
+    }
+  }
 
   return (
-    
-    <div className='container-celda'> 
-      <h1>Incremento: {contador}</h1>
-      <div className="container-celda__button">
-      <Button variant="primary" onClick={incrementarValor}><i class="bi bi-apple"></i></Button>
-      <Button variant="primary" onClick={decrementarValor}><i class="bi bi-apple"></i></Button>
+    <div>
+  <Ejemplo02 contador={contador}
+  incrementar={incrementarValor}
+  decrementar={decrementarValor}
+  fondo={fondo}
+/>
 </div>
-      </div>
-      
   );
 }
