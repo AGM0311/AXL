@@ -1,13 +1,14 @@
 import React from 'react'
-import{Tabs, Tab} from "react-bootstrap";
+import{Tabs, Tab,Row,Col} from "react-bootstrap";
 import{ItemProductos} from "../ItemProductos";
 import {Datos} from '../../../utils/bd';
+import "./HomeProductos.scss";
 
 export function HomeProductos() {
     console.log(Datos);
 const fondo={
     tema:{
-        backgroundColor:'black',
+        backgroundColor:' rgb(212, 224, 237)',
         color:"white",
         fontSize:'20px'
     }
@@ -22,12 +23,13 @@ const fondo={
     className="mb-3"
   >
     <Tab eventKey="home" title="Lista de Productos">
+    <Row xs={1} sm={2} md={3} lg={4}> 
       {Datos.map((producto,index)=>(
-        
-        //<ItemProductos/>
+        <Col>
         <ItemProductos key={index} producto={producto} />
-        
+        </Col>
       ))}
+      </Row>
     </Tab>
   </Tabs>
   </div>
