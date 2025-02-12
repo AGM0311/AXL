@@ -1,12 +1,9 @@
 import React from 'react'
 
-
-
-export function Home() {
+export  function Otro() {
   return (
     <div>
-      Pagina de incio
+      <h1>Nuevos</h1>
     </div>
   )
 }
-
