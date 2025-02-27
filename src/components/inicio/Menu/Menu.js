@@ -25,8 +25,8 @@ export function Menu() {
             <Link class="nav-link active" aria-current="page" href="#">
               Home
             </Link>
-            <Link class="nav-link" to="/">
-              Features
+            <Link class="nav-link" to="/formproductos">
+              Gestion de productos
             </Link>
             <Link class="nav-link" to="/producto">
               Productos
